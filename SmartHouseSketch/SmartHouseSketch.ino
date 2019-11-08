@@ -11,9 +11,9 @@
 
 bool isLight = false;
 const int photocellPin = 1;
-const int photoCellResult;
+int photoCellResult;
 const int movementPin = 0;
-const int movementResult = 0;
+int movementResult;
 unsigned long LCD_timing = 0;
 unsigned long DHT_timing = 0;
 unsigned long PHOTOCELL_timing = 0;
