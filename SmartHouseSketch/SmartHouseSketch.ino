@@ -23,6 +23,7 @@ const int reedSwitchPin = 8;
 
 int photoCellResult;
 int rangeFinderResult;
+int reedSwitchResult;
 
 unsigned long LCD_timing = 0;
 unsigned long DHT_timing = 0;
@@ -50,7 +51,7 @@ void loop() {
   if(millis() - PHOTOCELL_timing > PHOTOCELL_UPDATE_TIME) {
     PHOTOCELL_timing = millis();
     photoCellResult = analogRead(photocellPin);
-    //reedSwitchResult = digitalRead(reedSwitchPin);
+    reedSwitchResult = digitalRead(reedSwitchPin);
     rangeFinderResult = sonar.ping_cm();
     
     if(photoCellResult > LIGHT_TIME) {
